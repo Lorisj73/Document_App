@@ -16,3 +16,6 @@
 2.  ```cmd + shift + O ```permet d'ouvrir une barre de recherche pour aller dans un fichier rapidement. Similaire a cmd + P dans visual Studio Code.
 3. Pour indenter le code, le raccourci est le suivant ``` Control + I ```
 4. Pour mettre en commentaire la selection : ```CMD + /```
+
+## Exercice 3 : 
+- Pour changer de téléphone pour le simulateur, il suffit de le séléctionner en haut de la page de Xcode, sur le menu dépliant du téléphone 
