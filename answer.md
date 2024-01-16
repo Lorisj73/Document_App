@@ -18,4 +18,11 @@
 4. Pour mettre en commentaire la selection : ```CMD + /```
 
 ## Exercice 3 : 
-- Pour changer de téléphone pour le simulateur, il suffit de le séléctionner en haut de la page de Xcode, sur le menu dépliant du téléphone 
+- Pour changer de téléphone pour le simulateur, il suffit de le séléctionner en haut de la page de Xcode, sur le menu dépliant du téléphone
+
+
+## 03 - Delegation
+
+### Exercice 1 :
+En programmation, l'intérêt d'une propriété statique est de rendre des valeurs fixes, c'est-à-dire qu'elles ne soient pas modifiable. Ici par exemple on rend nos données statiques car elles ne seront pas sujettes à modification
+
