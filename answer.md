@@ -12,7 +12,7 @@
 - Lancer une Application sur le Simulateur : Pour tester votre application, vous devez la lancer sur un simulateur. Cela implique de choisir un appareil simulé et une version d'iOS, puis de compiler et d'exécuter l'application. Lorsque vous - lancez l'application sur le simulateur, vous pouvez interagir avec elle comme si elle était exécutée sur un vrai appareil, ce qui vous permet de vérifier son fonctionnement et son apparence.
 
 ## Exercice 2 : 
-  1 - ```cmd + R ``` permet d'éxecuter le code de l'application.
-  2 -  ```cmd + shift + O ```permet d'ouvrir une barre de recherche pour aller dans un fichier rapidement. Similaire a cmd + P dans visual Studio Code.
-  3 - Pour indenter le code, le raccourci est le suivant ``` Control + I ```
-  4 - Pour mettre en commentaire la selection : ```CMD + /```
+1. ```cmd + R ``` permet d'éxecuter le code de l'application.
+2.  ```cmd + shift + O ```permet d'ouvrir une barre de recherche pour aller dans un fichier rapidement. Similaire a cmd + P dans visual Studio Code.
+3. Pour indenter le code, le raccourci est le suivant ``` Control + I ```
+4. Pour mettre en commentaire la selection : ```CMD + /```
