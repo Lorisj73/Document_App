@@ -12,6 +12,12 @@
 		8320C8A12B56CFF20064CFB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8320C89F2B56CFF20064CFB4 /* Main.storyboard */; };
 		8320C8A32B56CFF50064CFB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8320C8A22B56CFF50064CFB4 /* Assets.xcassets */; };
 		8320C8A62B56CFF50064CFB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8320C8A42B56CFF50064CFB4 /* LaunchScreen.storyboard */; };
+		A2AE1E512B57C4E600D44F9A /* femme.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1E4C2B57C4E500D44F9A /* femme.jpg */; };
+		A2AE1E522B57C4E600D44F9A /* aquarium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1E4D2B57C4E500D44F9A /* aquarium.jpg */; };
+		A2AE1E532B57C4E600D44F9A /* tente.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1E4E2B57C4E500D44F9A /* tente.jpg */; };
+		A2AE1E542B57C4E600D44F9A /* montagne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1E4F2B57C4E500D44F9A /* montagne.jpg */; };
+		A2AE1E552B57C4E600D44F9A /* paris.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2AE1E502B57C4E600D44F9A /* paris.jpg */; };
+		A2AE1E572B57CB1800D44F9A /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AE1E562B57CB1800D44F9A /* DocumentViewController.swift */; };
 		A2DEB2882B57B561006FE892 /* DocumentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DEB2872B57B561006FE892 /* DocumentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,11 +43,17 @@
 		8320C8992B56CFF20064CFB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8320C89B2B56CFF20064CFB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8320C8A02B56CFF20064CFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8320C8A22B56CFF50064CFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8320C8A22B56CFF50064CFB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/duboimax/Documents/Document_App/../../partage-P/Document App/Document App/Assets.xcassets"; sourceTree = "<absolute>"; };
 		8320C8A52B56CFF50064CFB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8320C8A72B56CFF50064CFB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8320C8AC2B56CFF50064CFB4 /* Document AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Document AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8320C8B62B56CFF50064CFB4 /* Document AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Document AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2AE1E4C2B57C4E500D44F9A /* femme.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = femme.jpg; path = "Document App/Img/femme.jpg"; sourceTree = SOURCE_ROOT; };
+		A2AE1E4D2B57C4E500D44F9A /* aquarium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = aquarium.jpg; path = "Document App/Img/aquarium.jpg"; sourceTree = SOURCE_ROOT; };
+		A2AE1E4E2B57C4E500D44F9A /* tente.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tente.jpg; path = "Document App/Img/tente.jpg"; sourceTree = SOURCE_ROOT; };
+		A2AE1E4F2B57C4E500D44F9A /* montagne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = montagne.jpg; path = "Document App/Img/montagne.jpg"; sourceTree = SOURCE_ROOT; };
+		A2AE1E502B57C4E600D44F9A /* paris.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = paris.jpg; path = "Document App/Img/paris.jpg"; sourceTree = SOURCE_ROOT; };
+		A2AE1E562B57CB1800D44F9A /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		A2DEB2872B57B561006FE892 /* DocumentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,15 +103,29 @@
 		8320C8982B56CFF20064CFB4 /* Document App */ = {
 			isa = PBXGroup;
 			children = (
+				A2AE1E4B2B57C4D000D44F9A /* Images */,
 				8320C8992B56CFF20064CFB4 /* AppDelegate.swift */,
 				8320C89B2B56CFF20064CFB4 /* SceneDelegate.swift */,
 				8320C89F2B56CFF20064CFB4 /* Main.storyboard */,
-				A2DEB2872B57B561006FE892 /* DocumentTableViewController.swift */,
 				8320C8A22B56CFF50064CFB4 /* Assets.xcassets */,
+				A2DEB2872B57B561006FE892 /* DocumentTableViewController.swift */,
 				8320C8A42B56CFF50064CFB4 /* LaunchScreen.storyboard */,
 				8320C8A72B56CFF50064CFB4 /* Info.plist */,
+				A2AE1E562B57CB1800D44F9A /* DocumentViewController.swift */,
 			);
 			path = "Document App";
+			sourceTree = "<group>";
+		};
+		A2AE1E4B2B57C4D000D44F9A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A2AE1E4D2B57C4E500D44F9A /* aquarium.jpg */,
+				A2AE1E4C2B57C4E500D44F9A /* femme.jpg */,
+				A2AE1E4F2B57C4E500D44F9A /* montagne.jpg */,
+				A2AE1E502B57C4E600D44F9A /* paris.jpg */,
+				A2AE1E4E2B57C4E500D44F9A /* tente.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +234,12 @@
 			files = (
 				8320C8A62B56CFF50064CFB4 /* LaunchScreen.storyboard in Resources */,
 				8320C8A32B56CFF50064CFB4 /* Assets.xcassets in Resources */,
+				A2AE1E532B57C4E600D44F9A /* tente.jpg in Resources */,
+				A2AE1E512B57C4E600D44F9A /* femme.jpg in Resources */,
+				A2AE1E542B57C4E600D44F9A /* montagne.jpg in Resources */,
 				8320C8A12B56CFF20064CFB4 /* Main.storyboard in Resources */,
+				A2AE1E522B57C4E600D44F9A /* aquarium.jpg in Resources */,
+				A2AE1E552B57C4E600D44F9A /* paris.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8320C89A2B56CFF20064CFB4 /* AppDelegate.swift in Sources */,
+				A2AE1E572B57CB1800D44F9A /* DocumentViewController.swift in Sources */,
 				A2DEB2882B57B561006FE892 /* DocumentTableViewController.swift in Sources */,
 				8320C89C2B56CFF20064CFB4 /* SceneDelegate.swift in Sources */,
 			);

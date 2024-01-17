@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OKG-uT-Bps">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TUo-ob-kMw">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Document Table View Controller-->
+        <!--Liste de Documents 📃-->
         <scene sceneID="xmT-hn-8eg">
             <objects>
                 <tableViewController id="OKG-uT-Bps" customClass="DocumentTableViewController" customModule="Document_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,11 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DocumentCell" textLabel="WXI-3E-xKK" detailTextLabel="yOX-VU-0Og" style="IBUITableViewCellStyleSubtitle" id="cEk-s2-Dmd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DocumentCell" textLabel="WXI-3E-xKK" detailTextLabel="yOX-VU-0Og" style="IBUITableViewCellStyleSubtitle" id="cEk-s2-Dmd">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cEk-s2-Dmd" id="qgV-1Z-5TB">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WXI-3E-xKK">
@@ -39,6 +40,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="az0-3V-YPg" kind="show" identifier="ShowDocumentSegue" id="x1A-BT-ygA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -46,13 +50,63 @@
                             <outlet property="delegate" destination="OKG-uT-Bps" id="cDT-zb-35G"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Liste de Documents 📃" id="1Dv-pe-HNS"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXa-hv-2cr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="-119"/>
+            <point key="canvasLocation" x="805.3435114503817" y="-119.01408450704226"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bci-fa-HU5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TUo-ob-kMw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="phe-dX-0Ce">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OKG-uT-Bps" kind="relationship" relationship="rootViewController" id="L2U-5g-dI6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhI-aC-YPC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-121.37404580152672" y="-119.01408450704226"/>
+        </scene>
+        <!--Document View Controller-->
+        <scene sceneID="wwv-fO-QHG">
+            <objects>
+                <viewController id="az0-3V-YPg" customClass="DocumentViewController" customModule="Document_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pho-D0-WR0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aquarium.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1iH-aq-Unj">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ns2-fJ-aDH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1iH-aq-Unj" firstAttribute="centerX" secondItem="Pho-D0-WR0" secondAttribute="centerX" id="1ij-yg-8Hn"/>
+                            <constraint firstItem="1iH-aq-Unj" firstAttribute="bottom" secondItem="ns2-fJ-aDH" secondAttribute="bottom" id="7Zz-GW-9FB"/>
+                            <constraint firstItem="1iH-aq-Unj" firstAttribute="top" secondItem="ns2-fJ-aDH" secondAttribute="top" id="XWy-tw-bk7"/>
+                            <constraint firstItem="1iH-aq-Unj" firstAttribute="leading" secondItem="ns2-fJ-aDH" secondAttribute="leading" id="pVA-FH-0T5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TQb-rB-7pi"/>
+                    <connections>
+                        <outlet property="imageView" destination="1iH-aq-Unj" id="JG5-9J-AbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lcj-6L-yGa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="-119.01408450704226"/>
         </scene>
     </scenes>
     <resources>
+        <image name="aquarium.jpg" width="7129" height="4753"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
