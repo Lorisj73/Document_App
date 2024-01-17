@@ -26,3 +26,21 @@
 ### Exercice 1 :
 En programmation, l'intérêt d'une propriété statique est de rendre des valeurs fixes, c'est-à-dire qu'elles ne soient pas modifiable. Ici par exemple on rend nos données statiques car elles ne seront pas sujettes à modification
 
+### Exercice 2 :
+L'interet du dequeueReusableCell est d'améliorer les performances lorsque l'on affiche une liste de cells. Cela passe par le fait que lorsque des cells disparaissent de l'écran (lors d'un scroll par exemple), ces cells sont vidées et rendu disponibles pour de nouveaux contenus afin de libérer de la mémoire et donc améliorer les performances.
+
+## 04 - Navigation
+
+### Exercice 1 :
+- Le NavigationController sert à naviguer entre les différents viewController
+- La différence avec la NavigationBar est que cette dernière sert à afficher des informations contextuelles sur la vue actuelle, telles que le titre de la vue, des boutons d'action, des éléments de navigation, etc.
+
+## 06 Ecran detail
+
+### Exercice 1 :
+Un segue définis un lien de navigation entre deux ViewController. Il sert par exemple pour les transitions ou pour préparer des données avant une navigation entre les vues.
+
+### Exercice 2 :
+- Une constraint est une règle qui fixe des limites ainsi que des aides pour les positionnements et les tailles des images par exemple.
+- AutoLayout est un système de disposition automatique des éléments d'interface utilisateur dans iOS. Il est basé sur l'utilisation de contraintes pour décrire la disposition des vues de manière dynamique et réactive aux changements, tels que des rotations d'écran ou des tailles d'écran différentes.
+
