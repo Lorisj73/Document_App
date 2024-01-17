@@ -1,5 +1,7 @@
 # Document réponse projet Document app
 
+## Par Dubois Maxence et Jacob Loris
+
 ## 01 - Environnement
 
 ### Exercice 1 : 
