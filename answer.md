@@ -28,21 +28,31 @@
 ### Exercice 1 :
 En programmation, l'intérêt d'une propriété statique est de rendre des valeurs fixes, c'est-à-dire qu'elles ne soient pas modifiable. Ici par exemple on rend nos données statiques car elles ne seront pas sujettes à modification
 
-### Exercice 2 :
-L'interet du dequeueReusableCell est d'améliorer les performances lorsque l'on affiche une liste de cells. Cela passe par le fait que lorsque des cells disparaissent de l'écran (lors d'un scroll par exemple), ces cells sont vidées et rendu disponibles pour de nouveaux contenus afin de libérer de la mémoire et donc améliorer les performances.
+## 09 - QLPreview
 
-## 04 - Navigation
+### Question :
+Le choix du disclosureIndicator pour les cellules d'un tableau offre plusieurs avantages en termes d'expérience utilisateur (UX) et de design d'interface. Il assure une indication claire de navigabilité, conformité aux conventions iOS, simplicité et minimalisme, favorisant ainsi le focus sur le contenu principal. 
 
-### Exercice 1 :
-- Le NavigationController sert à naviguer entre les différents viewController
-- La différence avec la NavigationBar est que cette dernière sert à afficher des informations contextuelles sur la vue actuelle, telles que le titre de la vue, des boutons d'action, des éléments de navigation, etc.
+## 10 - Importation 
 
-## 06 Ecran detail
+### Questions :
 
-### Exercice 1 :
-Un segue définis un lien de navigation entre deux ViewController. Il sert par exemple pour les transitions ou pour préparer des données avant une navigation entre les vues.
+- #selector :
+En Swift, #selector est utilisé pour créer un sélecteur, un objet qui représente le nom d'une méthode. Les sélecteurs sont souvent utilisés en association avec des cibles d'actions (comme des actions de boutons) pour définir dynamiquement la méthode qui doit être appelée en réponse à un événement particulier.
 
-### Exercice 2 :
-- Une constraint est une règle qui fixe des limites ainsi que des aides pour les positionnements et les tailles des images par exemple.
-- AutoLayout est un système de disposition automatique des éléments d'interface utilisateur dans iOS. Il est basé sur l'utilisation de contraintes pour décrire la disposition des vues de manière dynamique et réactive aux changements, tels que des rotations d'écran ou des tailles d'écran différentes.
+- .add : Dans notre cas, le .add sert à ajouter une fonction appelée lorsque l'on appuie sur le bouton
+
+- En Swift, les fonctions ciblées avec #selector doivent être exposées à l'Objective-C. La notation @objc est utilisée pour indiquer que la fonction peut être invoquée à partir d'Objective-C. Cela est nécessaire car les sélecteurs sont un concept Objective-C. 
+
+- Il est possible d'ajouter plusieurs boutons à la barre de navigation en utilisant la propriété navigationItem.rightBarButtonItems ou navigationItem.leftBarButtonItems. Ces propriétés acceptent un tableau de UIBarButtonItem, permettant d'ajouter plusieurs boutons du côté droit ou gauche de la barre de navigation.
+Exemple :
+```swift
+let button1 = UIBarButtonItem(title: "Bouton 1", style: .plain, target: self, action: #selector(bouton1Tapped))
+let button2 = UIBarButtonItem(title: "Bouton 2", style: .plain, target: self, action: #selector(bouton2Tapped))
+
+navigationItem.rightBarButtonItems = [button1, button2]
+```
+- Comme html/javascript, le defer sert à faire en sorte que le code mis dans le ***defer*** soit toujours éxécuté à la fin.
+- Par exemple dans une fonction, la partie situé dans le defer serait éxécutée juste avant le return
+
 
