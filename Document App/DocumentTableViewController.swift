@@ -30,25 +30,23 @@ struct DocumentFile {
 
 func listFileInBundle() -> [DocumentFile] {
     
-    let fm = FileManager.default // Initailisation de la gestion des fichiers
-    let path = Bundle.main.resourcePath! // Indication du chemin vers DocumentApp
-    let items = try! fm.contentsOfDirectory(atPath: path) // Récupération de toutes les images
+    let fm = FileManager.default
+    let path = Bundle.main.resourcePath!
+    let items = try! fm.contentsOfDirectory(atPath: path)
     
     
     var bundleDocuments: [DocumentFile] = []
     
-    for item in items { // Boucle sur chaque image
-        if !item.hasSuffix("DS_Store") && item.hasSuffix(".jpg") { // On filtre les images
-            let currentUrl = URL(fileURLWithPath: path + "/" + item) // On récupére les propriétés de l'image
+    for item in items {
+        if !item.hasSuffix("DS_Store") && item.hasSuffix(".jpg") {
+            let currentUrl = URL(fileURLWithPath: path + "/" + item)
             let resourcesValues = try! currentUrl.resourceValues(forKeys: [.contentTypeKey, .nameKey, .fileSizeKey])
-            // On récupère les valeurs des propriétés de l'image
             bundleDocuments.append(DocumentFile(
                 title: resourcesValues.name!,
                 size: resourcesValues.fileSize ?? 0,
                 imageName: item,
                 url: currentUrl,
-                type: resourcesValues.contentType!.description) // On crée un objet DocumentFile avec les données que nous avons
-                                   // récupéré
+                type: resourcesValues.contentType!.description)
             )
         }
     }
@@ -120,7 +118,7 @@ class DocumentTableViewController: UITableViewController, QLPreviewControllerDat
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2 // Deux sections : Bundle et Importations
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -155,11 +153,8 @@ class DocumentTableViewController: UITableViewController, QLPreviewControllerDat
         previewController.dataSource = self
         
         if indexPath.section == 0 {
-            // Si l'élément sélectionné est dans la section Bundle
             previewController.currentPreviewItemIndex = indexPath.row
         } else {
-            // Si l'élément sélectionné est dans la section Importations
-            // Ajuster l'index en prenant en compte la taille de la première section
             previewController.currentPreviewItemIndex = listDocumentBundle.count + indexPath.row
         }
         
@@ -173,13 +168,10 @@ class DocumentTableViewController: UITableViewController, QLPreviewControllerDat
     }
     
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-        // Calculer l'index réel en fonction du nombre d'éléments dans la première section
         if index < listDocumentBundle.count {
-            // L'index appartient à la première section (Bundle)
             let document = listDocumentBundle[index]
             return document.url as QLPreviewItem
         } else {
-            // L'index appartient à la deuxième section (Importations)
             let adjustedIndex = index - listDocumentBundle.count
             let document = listDocumentImported[adjustedIndex]
             return document.url as QLPreviewItem
@@ -187,8 +179,6 @@ class DocumentTableViewController: UITableViewController, QLPreviewControllerDat
     }
     
     @objc func importDocument() {
-        // Implémentez ici la logique d'importation de documents
-        // Par exemple, ouvrir un UIDocumentPickerViewController pour sélectionner des fichiers
         let documentPicker = UIDocumentPickerViewController(documentTypes: ["public.content"], in: .import)
         documentPicker.delegate = self
         documentPicker.modalPresentationStyle = .formSheet
@@ -245,13 +235,10 @@ extension DocumentTableViewController: UIDocumentPickerDelegate {
                 type: resourcesValues.contentType!.description
             )
             
-            // Copier le fichier dans le répertoire des documents
             copyFileToDocumentsDirectory(fromUrl: selectedUrl)
             
-            // Ajouter le nouveau document à la source de données
             listDocumentImported = listFileInDocumentApplication()
             
-            // Mettre à jour la vue tableau
             tableView.reloadData()
         } catch {
             print("Erreur lors de la récupération des informations du document : \(error)")
