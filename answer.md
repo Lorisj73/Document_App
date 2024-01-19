@@ -1,5 +1,7 @@
 # Document réponse projet Document app
 
+## Par Dubois Maxence et Jacob Loris
+
 ## 01 - Environnement
 
 ### Exercice 1 : 
@@ -25,4 +27,32 @@
 
 ### Exercice 1 :
 En programmation, l'intérêt d'une propriété statique est de rendre des valeurs fixes, c'est-à-dire qu'elles ne soient pas modifiable. Ici par exemple on rend nos données statiques car elles ne seront pas sujettes à modification
+
+## 09 - QLPreview
+
+### Question :
+Le choix du disclosureIndicator pour les cellules d'un tableau offre plusieurs avantages en termes d'expérience utilisateur (UX) et de design d'interface. Il assure une indication claire de navigabilité, conformité aux conventions iOS, simplicité et minimalisme, favorisant ainsi le focus sur le contenu principal. 
+
+## 10 - Importation 
+
+### Questions :
+
+- #selector :
+En Swift, #selector est utilisé pour créer un sélecteur, un objet qui représente le nom d'une méthode. Les sélecteurs sont souvent utilisés en association avec des cibles d'actions (comme des actions de boutons) pour définir dynamiquement la méthode qui doit être appelée en réponse à un événement particulier.
+
+- .add : Dans notre cas, le .add sert à ajouter une fonction appelée lorsque l'on appuie sur le bouton
+
+- En Swift, les fonctions ciblées avec #selector doivent être exposées à l'Objective-C. La notation @objc est utilisée pour indiquer que la fonction peut être invoquée à partir d'Objective-C. Cela est nécessaire car les sélecteurs sont un concept Objective-C. 
+
+- Il est possible d'ajouter plusieurs boutons à la barre de navigation en utilisant la propriété navigationItem.rightBarButtonItems ou navigationItem.leftBarButtonItems. Ces propriétés acceptent un tableau de UIBarButtonItem, permettant d'ajouter plusieurs boutons du côté droit ou gauche de la barre de navigation.
+Exemple :
+```swift
+let button1 = UIBarButtonItem(title: "Bouton 1", style: .plain, target: self, action: #selector(bouton1Tapped))
+let button2 = UIBarButtonItem(title: "Bouton 2", style: .plain, target: self, action: #selector(bouton2Tapped))
+
+navigationItem.rightBarButtonItems = [button1, button2]
+```
+- Comme html/javascript, le defer sert à faire en sorte que le code mis dans le ***defer*** soit toujours éxécuté à la fin.
+- Par exemple dans une fonction, la partie situé dans le defer serait éxécutée juste avant le return
+
 
